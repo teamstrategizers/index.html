@@ -48,7 +48,7 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#eef2
 <body>
 <div class="app">
   <div class="header">
-    <div class="h-title">Influencer KPIs — Flipkart Seller Hub</div>
+    <div class="h-title">Influencer KPIs Flipkart Seller Hub</div>
     <div class="controls">
       <input id="search" class="input" placeholder="Search influencer or id" />
       <div class="filters">
@@ -235,7 +235,7 @@ function openSide(r){
   const max = Math.max(...r.samples.map(s=>s.videoViews));
   r.samples.forEach(s=>{
     const wrap = document.createElement('div');
-    const label = document.createElement('div'); label.textContent = `${s.cat} — ${s.videoViews.toLocaleString()} views • CTR ${s.ctr}% • Conv ${s.conv}% • Sales ₹${(s.sales||0).toLocaleString()}`;
+    const label = document.createElement('div'); label.textContent = `${s.cat} ${s.videoViews.toLocaleString()} views • CTR ${s.ctr}% • Conv ${s.conv}% • Sales ₹${(s.sales||0).toLocaleString()}`;
     const bar = document.createElement('div'); bar.className='bar';
     const inner = document.createElement('i'); inner.style.width = Math.round((s.videoViews/max)*100) + '%'; bar.appendChild(inner);
     wrap.appendChild(label); wrap.appendChild(bar); categoryBars.appendChild(wrap);
